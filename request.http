@@ -1,0 +1,77 @@
+// Cadastrar Aluno
+POST http://localhost:8001/alunos
+content-type: application/json
+
+{
+  "nome": "Zuco",
+  "matricula": "a50320922"
+}
+
+###
+// Consultar Todos Alunos
+GET http://localhost:8001/alunos
+
+###
+
+// Consultar Aluno Pelo ID
+GET http://localhost:8001/alunos/ID_AQUI
+
+###
+
+// Editar Aluno
+PUT http://localhost:8001/alunos/ID_AQUI
+content-type: application/json
+
+{
+  "nome": "Eric da Silva Vanin",
+  "matricula": "a52203209"
+}
+
+###
+
+// Deletar Aluno
+DELETE http://localhost:8001/alunos/ID_AQUI
+
+###
+
+// Cadastrar Disciplina
+POST http://localhost:8001/disciplinas
+content-type: application/json
+
+{
+  "nome": "Matemática"
+}
+
+###
+
+// Consultar Disciplinas
+GET http://localhost:8001/disciplinas
+
+###
+
+// Consultar Disciplinas Pelo ID
+GET http://localhost:8001/disciplinas/ID_AQUI
+
+###
+
+// Cadastrar Nota
+POST http://localhost:8001/notas
+content-type: application/json
+
+{
+  "alunoId": "ID_DO_ALUNO",
+  "disciplinaId": "ID_DA_DISCIPLINA",
+  "nota": 8.5
+}
+
+
+###
+
+// Consultar Nota por Aluno e Disciplina
+GET http://localhost:8001/notas/ID_DO_ALUNO/ID_DA_DISCIPLINA
+
+
+###
+
+// Gerar Histórico Escolar por Aluno
+GET http://localhost:8001/historico/ID_DO_ALUNO
